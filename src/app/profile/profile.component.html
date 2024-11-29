@@ -1,0 +1,32 @@
+<div class="header">
+  <h1 class="app-title">Социальная сеть</h1>
+  <div class="header-buttons">
+    <button routerLink="/friends" class="header-button">Друзья</button>
+    <button routerLink="/news" class="header-button">Новости</button>
+    <button *ngIf="user?.role === 'admin'"  routerLink="/admin" class="header-button">Админнистрирование</button>
+    <button (click)="logout()" class="header-button">Выйти</button>
+  </div>
+</div>
+
+<div class="profile-container">
+  <h2>Профиль пользователя</h2>
+  <div class="user-info">
+    <p>Имя пользователя: {{ user?.name }}</p>
+    <p>Email: {{ user?.email }}</p>
+    <p>Дата рождения: {{ user?.date_of_birth }}</p>
+    <button class="header-button" routerLink="/add-news">Добавить новость</button>
+  </div>
+
+  <div class="news-container">
+    <h2>Новости</h2>
+    <ul class="news-list">
+      <li *ngFor="let n of news" class="news-item">
+        <div class="n-container">
+          <p>Загловок: {{ n.title }}</p>
+          <p>Новость: {{ n.message }}</p>
+          <p>Дата публикации: {{ n.timestamp }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

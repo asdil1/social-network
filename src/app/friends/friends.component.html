@@ -1,0 +1,27 @@
+<div class="header">
+  <h1 class="app-title">Социальная сеть</h1>
+  <div class="header-buttons">
+    <button routerLink="/profile" class="header-button">Назад к профилю</button>
+    <button routerLink="/news" class="header-button">Новости</button>
+    <button *ngIf="userService.getUser()?.role === 'admin'" routerLink="/admin" class="header-button">Админнистрирование</button>
+    <button (click)="logout()" class="header-button">Выйти</button>
+  </div>
+</div>
+
+<div class="profile-container">
+  <h2>Друзья пользователя</h2>
+  <input type="text" [(ngModel)]="friendName" placeholder="Добавление друзей" required/>
+  <button *ngIf="friendName" class="header-button" (click)="addFriend()">Добавить друга</button>
+  <div class="user-info">
+    <ul class="friends-list">
+      <li *ngFor="let friend of friends" class="friend-item">
+        <div class="friend-container">
+          <p>Имя: {{ friend.name }}</p>
+          <p>Email:{{ friend.email }}</p>
+          <p>Дата рождения: {{ friend.date_of_birth }}</p>
+          <button class="delete-friend-button" (click)="deleteFriend(friend.id)">Удалить друга</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

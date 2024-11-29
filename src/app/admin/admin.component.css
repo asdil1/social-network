@@ -1,0 +1,12 @@
+.back-button {
+  color: #007bff; /* Цвет текста для ссылок */
+  background: none; /* Убираем фон */
+  border: none; /* Убираем рамку */
+  cursor: pointer; /* Указываем, что элемент кликабельный */
+  font-size: 16px; /* Размер шрифта */
+  transition: color 0.3s; /* Плавный переход для цвета текста */
+}
+
+.back-button:hover {
+  color: #e36868; /* Цвет текста при наведении */
+}

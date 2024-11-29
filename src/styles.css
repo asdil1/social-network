@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Цвет фона страницы */
+  margin: 0;
+}
+
+.login-register-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover:enabled {
+  background-color: #0056b3;
+}
+
+.login-register-btn{
+  margin-top: 10px;
+  color: #007bff; /* Цвет текста для ссылок */
+  background: none; /* Убираем фон */
+  border: none; /* Убираем рамку */
+  cursor: pointer; /* Указываем, что элемент кликабельный */
+  font-size: 16px; /* Размер шрифта */
+  transition: color 0.3s; /* Плавный переход для цвета текста */
+}
+
+.login-register-btn:hover {
+  color: #e36868; /* Цвет текста при наведении */
+}
